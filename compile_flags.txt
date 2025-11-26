@@ -1,2 +1,1 @@
--I/home/archy/TerminalGameConsole/includes.h
--I/home/archy/TerminalGameConsole/mazerunner.h
+-I/home/archy/TerminalGameConsole/
