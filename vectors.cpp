@@ -1,8 +1,8 @@
 #include "vectors.hpp"
 #include <math.h>
 namespace SH {
-int dot(vec2 a, vec2 b) { return a.x * b.x + a.y * b.y; }
-int dot(vec3 a, vec3 b) { return a.x * b.x + a.y * b.y + a.z * b.z; }
+float dot(vec2 a, vec2 b) { return a.x * b.x + a.y * b.y; }
+float dot(vec3 a, vec3 b) { return a.x * b.x + a.y * b.y + a.z * b.z; }
 vec3 cross(vec2 a, vec2 b) {
   vec3 c;
   c.z = a.x * b.y - a.y * b.x;
@@ -42,10 +42,10 @@ vec3 subtract(vec3 a, vec3 b) {
   return c;
 }
 float distance(vec2 a, vec2 b) {
-  return std::sqrt((float)(pow((a.x - b.x), 2) + pow((a.y - b.y), 2)));
+  return std::sqrt(pow((a.x - b.x), 2) + pow((a.y - b.y), 2));
 }
 float distance(vec3 a, vec3 b) {
-  return std::sqrt((float)(pow((a.x - b.x), 2) + pow((a.y - b.y), 2) +
-                   pow((a.z - b.z), 2)));
+  return std::sqrt(pow((a.x - b.x), 2) + pow((a.y - b.y), 2) +
+                   pow((a.z - b.z), 2));
 }
 } // namespace SH
