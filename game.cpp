@@ -3,6 +3,7 @@
 // #include <SDL2/SDL_ttf.h>
 #include <iostream>
 #include <string>
+#include "game.hpp"
 using namespace std;
 // class PlayerScore
 //{
@@ -310,7 +311,7 @@ Contact CheckPaddleCollision(ball const &ball, Paddle const &paddle)
     return contact;
 }
 
-int main(int argc, char *argv[])
+void init_pong()
 {
 
     SDL_Init(SDL_INIT_VIDEO);
@@ -482,7 +483,6 @@ int main(int argc, char *argv[])
     SDL_DestroyWindow(window);
     // TTF_CloseFont(scoreFont);
     // TTF_QUIT;
-    SDL_QUIT;
+    SDL_Quit();
 
-    return 0;
 }
